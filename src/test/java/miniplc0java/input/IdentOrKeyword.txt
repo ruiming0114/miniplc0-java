@@ -1,0 +1,7 @@
+begin end
+const
+var
+print
+a1
+aaa
+1a
