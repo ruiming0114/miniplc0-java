@@ -247,7 +247,7 @@ public final class Analyser {
             // 变量声明语句 -> 'var' 变量名 ('=' 表达式)? ';'
 
             // 变量名
-            var nameToken = expect(TokenType.Var);
+            var nameToken = expect(TokenType.Ident);
 
             // 变量初始化了吗
             boolean initialized = false;
@@ -296,7 +296,6 @@ public final class Analyser {
                 break;
             }
         }
-        throw new Error("Not implemented");
     }
 
     private int analyseConstantExpression() throws CompileError {
@@ -463,6 +462,5 @@ public final class Analyser {
         if (negate) {
             instructions.add(new Instruction(Operation.SUB));
         }
-        throw new Error("Not implemented");
     }
 }
